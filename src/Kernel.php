@@ -29,7 +29,6 @@ class Kernel
      */
     protected function discoverModules(): array
     {
-        // Ensure we always have an array, even if glob returns false.
         $moduleFiles = glob(__DIR__ . '/*/Module.php') ?: [];
         $modules = [];
         foreach ($moduleFiles as $filename) {
